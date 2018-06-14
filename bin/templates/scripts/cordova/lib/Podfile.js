@@ -90,7 +90,7 @@ Podfile.prototype.__parseForPods = function (text) {
 };
 
 Podfile.prototype.escapeSingleQuotes = function (string) {
-    return string.replace('\'', '\\\'');
+    return string.replace(new RegExp('\'', 'g'), '\\\'');
 };
 
 Podfile.prototype.getTemplate = function () {
